@@ -1,1 +1,1 @@
-# hotel
+# Simple page for hotel
