@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
-    <title>Hostel</title>
+    <title>Hotel</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,16 @@
 <body>
     <header class="navbar">
         <nav class="container">
-            <img class="logo" src="img/logo.png" alt="logo">
+            <img class="logo" src="img/logo-hotel.png" alt="Awangarda">
             <ul class="nav-list">
                 <li><a class="active" href="#home">Home</a></li>
                 <li><a href="#news">About</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Gallery</a>
                     <div class="dropdown-content">
-                        <a href="#">Garden</a>
-                        <a href="#">Room</a>
-                        <a href="#">Reception</a>
+                        <a class="nav-expanded" href="#">Garden</a>
+                        <a class="nav-expanded" href="#">Room</a>
+                        <a class="nav-expanded" href="#">Reception</a>
                     </div>
                 </li>
                 <li><a href="#news">Reservation</a></li>
@@ -73,37 +73,20 @@
         </section>
 
         <section class="section-check-availability">
-            <div class="check-availability col-xs-12 col-sm-3 col-md-3">
-                Check availability
-            </div>
-            <div class="check-availability-pickers col-xs-12 col-sm-7 col-md-7">
-                <input class="picker" placeholder="Arrival Date" type="text" id="datepicker1">
-                <input class="picker" placeholder="Departure Date" type="text" id="datepicker2">
-                <form>
-                    <div class="styled-select">
-                        <select property="voucherCategoryClass">
-                            <option value="Adults" disabled selected>Adults</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                </form>
-                <form>
-                    <div class="styled-select">
-                        <select class="select">
-                            <option value="Children" disabled selected>Children</option>
-                            <option value="0">0</0ption>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                        </select>
-                    </div>
-                </form>
-
-
+            <div class="container">
+                <div class="check-availability-pickers col-xs-7 col-xs-offset-1">
+                    <input class="picker" placeholder="Arrival Date" type="text" id="datepicker1">
+                    <input class="picker" placeholder="Departure Date" type="text" id="datepicker2">
+                    <form>
+                        <input class="styled-select" type="text" name="Adults" placeholder="Adults">
+                    </form>
+                    <form>
+                        <input class="styled-select" type="text" name="Adults" placeholder="Children">
+                    </form>
+                </div>
+                <div class="check-availability-button col-xs-3">
+                    <button class="check-button" type="button">Check Availability</button>
+                </div>
             </div>
         </section>
     </main>

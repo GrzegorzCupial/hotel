@@ -6,15 +6,12 @@ body {
 .navbar, .section-check-availability {
   background-color: rgba(52, 74, 113, 0.55);
   width: 100%;
+  height: 95px;
   position: fixed;
   z-index: 999; }
-
-.logo {
-  width: 400px;
-  height: auto;
-  position: absolute;
-  top: -5px;
-  left: 55px; }
+  .navbar .logo, .section-check-availability .logo {
+    width: 200px;
+    padding-top: 16px; }
 
 .nav-list {
   font-size: 0;
@@ -23,12 +20,12 @@ body {
   margin: 0;
   float: right; }
   .nav-list li {
-    display: inline; }
+    display: inline;
+    height: 95px; }
     .nav-list li a {
       font-size: 15px;
       font-weight: 600;
       text-transform: uppercase;
-      display: inline-block;
       color: #fff;
       text-align: center;
       padding: 40px 16px;
@@ -67,9 +64,10 @@ li.dropdown {
   -o-transition: 350ms;
   transition: 350ms;
   background-color: #fff;
+  margin-top: -6px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
-  .dropdown-content a {
+  .dropdown-content .nav-expanded {
     color: rgba(52, 74, 113, 0.85);
     font-size: 15px;
     font-weight: 600;
@@ -82,7 +80,7 @@ li.dropdown {
     -moz-transition: all .2s linear 0s;
     -webkit-transition: all .2s linear 0s;
     -o-transition: all .2s linear 0s; }
-    .dropdown-content a:hover {
+    .dropdown-content .nav-expanded:hover {
       padding-left: 22px; }
 
 .dropdown:hover .dropdown-content {
@@ -123,6 +121,15 @@ li.dropdown {
   position: absolute;
   left: 0;
   bottom: 0; }
+  .section-check-availability input::-webkit-input-placeholder,
+  .section-check-availability input[type=text] {
+    text-align: center;
+    padding: 5px; }
+  .section-check-availability .check-availability-title {
+    color: #fff;
+    font-size: 21px; }
+    .section-check-availability .check-availability-title p {
+      margin-top: 10px; }
 
 .picker, .form-number {
   display: inline-block;
@@ -131,12 +138,15 @@ li.dropdown {
   height: 40px;
   width: 150px;
   float: left;
-  margin-right: 20px; }
+  margin-right: 10px;
+  margin-left: 10px;
+  outline: none; }
   .picker option, .form-number option,
   .picker select, .form-number select {
     font-weight: 600; }
 
-.hasDatepicker, input::-webkit-input-placeholder {
+.hasDatepicker, .section-check-availability input::-webkit-input-placeholder,
+.section-check-availability input[type=text] {
   font-weight: 600;
   color: #fff;
   letter-spacing: 1px;
@@ -149,32 +159,37 @@ li.dropdown {
   height: 40px;
   overflow: hidden;
   overflow: -moz-hidden-unscrollable;
-  background: url(/img/up.svg) no-repeat right;
-  background-size: 10px;
-  margin-right: 20px;
-  color: #000;
+  background: transparent;
+  text-align: center;
+  outline: none;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #fff;
   font-weight: 600;
   border: 2px double #fff;
   display: inline-block;
   position: relative; }
-  .styled-select option {
-    background-color: #fff;
-    color: #000;
-    border: 0; }
-    .styled-select option:hover {
-      background-color: yellow !important; }
-  .styled-select select {
-    background: transparent;
-    -webkit-appearance: none;
-    width: 100px;
-    font-size: inherit;
-    border: 0;
-    color: #fff;
-    height: 40px;
-    outline: none; }
 
 .form-number {
   border: 0; }
+
+.check-availability-button .check-button {
+  width: 100%;
+  background-color: #CFF09E;
+  border: 0;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(52, 74, 113, 0.55);
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s; }
+  .check-availability-button .check-button:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff; }
 
 .ui-datepicker {
   background-color: #fff;
