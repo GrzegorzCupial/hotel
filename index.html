@@ -2,13 +2,14 @@
 <html lang="pl">
 
 <head>
-    <title>Hotel</title>
+    <title>Hottel</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Hind:400,600" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
 
 <body>
@@ -76,7 +77,9 @@
             <div class="container">
                 <div class="check-availability-pickers col-xs-7 col-xs-offset-1">
                     <input class="picker" placeholder="Arrival Date" type="text" id="datepicker1">
+                    <i class="fa fa-calendar picker-calendar" aria-hidden="true"></i>
                     <input class="picker" placeholder="Departure Date" type="text" id="datepicker2">
+                    <i class="fa fa-calendar picker-calendar" aria-hidden="true"></i>
                     <form>
                         <input class="styled-select" type="text" name="Adults" placeholder="Adults">
                     </form>
@@ -89,6 +92,69 @@
                 </div>
             </div>
         </section>
+        <section class="section-check-availability-mobile">
+            <div class="container">
+                <div class="check-availability-pickers col-xs-12">
+                    <div class="picker-mobile">
+                        <input class="picker" placeholder="Arrival Date" type="text" id="datepicker3">
+                        <i class="fa fa-calendar picker-calendar" aria-hidden="true"></i>
+                    </div>
+                    <div class="picker-mobile">
+                        <input class="picker" placeholder="Departure Date" type="text" id="datepicker4">
+                        <i class="fa fa-calendar picker-calendar" aria-hidden="true"></i>
+                    </div>
+                    <div class="picker-mobile">
+                        <form>
+                            <input class="styled-select" type="text" name="Adults" placeholder="Adults">
+                        </form>
+                    </div>
+                    <div class="picker-mobile">
+                        <form>
+                            <input class="styled-select" type="text" name="Adults" placeholder="Children">
+                        </form>
+                    </div>
+                </div>
+                <div class="check-availability-button col-xs-6 col-xs-offset-3">
+                    <button class="check-button" type="button">Check Availability</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-short">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 about-part">
+                        <h3>Hottel Hotel</h3>
+                        <span class="title-block"></span>
+                        <img class="small-photo" src="img/small-photo1.jpg" alt="Hotel's Photo">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor at tellus feugiat congue quis ut nunc.</p>
+                        <button class="read-more" type="button">Read More</button>
+                    </div>
+                    <div class="col-sm-12 col-md-4 about-part">
+                        <h3>Hotel Overview</h3>
+                        <span class="title-block"></span>
+                        <ul class="overview-list">
+                            <li>32 inch or larger TV</li>
+                            <li>Coffee maker</li>
+                            <li>WiFi</li>
+                            <li>Infinity pool</li>
+                            <li>Rooftop cocktail bar</li>
+                            <li>Dataport</li>
+                            <li>Rooftop cocktail bar</li>
+                            <li>Dataport</li>
+                        </ul>
+                        <button class="read-more" type="button">Read More</button>
+                    </div>
+                    <div class="col-sm-12 col-md-4 about-part">
+                        <h3>Location</h3>
+                        <span class="title-block"></span>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d909.2351081171392!2d-79.41245780472545!3d43.655625043682875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34ee68b4f63b%3A0xbe5085be0e697980!2sCollege+St%2C+Toronto%2C+ON%2C+Kanada!5e0!3m2!1spl!2spl!4v1475782939777" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -100,6 +166,8 @@
         $( function() {
             $( "#datepicker1" ).datepicker();
             $( "#datepicker2" ).datepicker();
+            $( "#datepicker3" ).datepicker();
+            $( "#datepicker4" ).datepicker();
         } );
     </script>
 </body>

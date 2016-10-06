@@ -3,13 +3,13 @@ body {
   font-family: 'Hind', sans-serif; }
 
 /*NAVBAR*/
-.navbar, .section-check-availability {
+.navbar, .section-check-availability, .section-check-availability-mobile {
   background-color: rgba(52, 74, 113, 0.55);
   width: 100%;
   height: 95px;
   position: fixed;
-  z-index: 999; }
-  .navbar .logo, .section-check-availability .logo {
+  z-index: 9999; }
+  .navbar .logo, .section-check-availability .logo, .section-check-availability-mobile .logo {
     width: 200px;
     padding-top: 16px; }
 
@@ -115,20 +115,20 @@ li.dropdown {
 
 /*CAROUSEL END*/
 /*DATE PICKER*/
-.section-check-availability {
+.section-check-availability, .section-check-availability-mobile {
   height: 80px;
   padding-top: 20px;
   position: absolute;
   left: 0;
-  bottom: 0; }
-  .section-check-availability input::-webkit-input-placeholder,
-  .section-check-availability input[type=text] {
-    text-align: center;
-    padding: 5px; }
-  .section-check-availability .check-availability-title {
+  bottom: 235px;
+  z-index: 1; }
+  .section-check-availability input::-webkit-input-placeholder, .section-check-availability-mobile input::-webkit-input-placeholder,
+  .section-check-availability input[type=text], .section-check-availability-mobile input[type=text] {
+    text-align: left; }
+  .section-check-availability .check-availability-title, .section-check-availability-mobile .check-availability-title {
     color: #fff;
     font-size: 21px; }
-    .section-check-availability .check-availability-title p {
+    .section-check-availability .check-availability-title p, .section-check-availability-mobile .check-availability-title p {
       margin-top: 10px; }
 
 .picker, .form-number {
@@ -145,14 +145,14 @@ li.dropdown {
   .picker select, .form-number select {
     font-weight: 600; }
 
-.hasDatepicker, .section-check-availability input::-webkit-input-placeholder,
-.section-check-availability input[type=text] {
+.hasDatepicker, .section-check-availability input::-webkit-input-placeholder, .section-check-availability-mobile input::-webkit-input-placeholder,
+.section-check-availability input[type=text], .section-check-availability-mobile input[type=text] {
   font-weight: 600;
   color: #fff;
   letter-spacing: 1px;
   padding-left: 5px; }
 
-.styled-select {
+.styled-select, .about-short .read-more {
   display: inline-block;
   float: left;
   width: 100px;
@@ -276,4 +276,87 @@ li.dropdown {
     background-color: #516d9b;
     padding: 12px 5px; }
 
+.picker-calendar {
+  position: absolute;
+  font-size: 18px;
+  top: 12px;
+  left: 135px;
+  color: #fff; }
+
+.section-check-availability-mobile {
+  height: 150px;
+  position: relative;
+  display: none;
+  bottom: 0;
+  background-color: #344A71; }
+  .section-check-availability-mobile .check-availability-button {
+    margin-top: 20px; }
+  .section-check-availability-mobile .check-availability-pickers {
+    text-align: center; }
+    .section-check-availability-mobile .check-availability-pickers .picker-mobile {
+      display: inline-block;
+      position: relative; }
+
 /*DATE PICKER END*/
+/*ABOUT MAIN PAGE*/
+.about-short {
+  position: relative; }
+  .about-short h3 {
+    border-bottom: 1px solid rgba(52, 74, 113, 0.2); }
+  .about-short .title-block {
+    height: 3px;
+    width: 15%;
+    background-color: #344A71;
+    display: block;
+    position: absolute;
+    top: 39px; }
+  .about-short .read-more {
+    color: #344A71;
+    border: 2px solid #344A71;
+    position: absolute;
+    left: 5px;
+    bottom: -50px; }
+    .about-short .read-more:hover {
+      background-color: #344A71;
+      color: #fff;
+      transition-property: all .2s linear 0s;
+      -moz-transition: all .2s linear 0s;
+      -webkit-transition: all .2s linear 0s;
+      -o-transition: all .2s linear 0s; }
+  .about-short .small-photo {
+    max-width: 100%; }
+  .about-short .overview-list {
+    padding-left: 25px;
+    margin: 0; }
+    .about-short .overview-list li {
+      list-style-image: url("../img/list-icon.png");
+      font-size: 16px; }
+  .about-short iframe {
+    width: 100%;
+    height: 100%; }
+
+/*MEDIA QUERIES START*/
+@media (max-width: 1122px) {
+  .section-check-availability, .section-check-availability-mobile {
+    display: none; }
+  .section-check-availability-mobile {
+    display: block; } }
+
+@media (max-width: 991px) {
+  .about-short .read-more {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0; }
+  .about-short .overview-list {
+    margin-bottom: 15px; } }
+
+@media (max-width: 668px) {
+  .picker-mobile {
+    margin-bottom: 20px;
+    width: 50%;
+    float: left; }
+    .picker-mobile input {
+      width: 90%; }
+  .picker-calendar {
+    left: 80%; } }

@@ -1,4 +1,6 @@
 $green: #CFF09E;
+$lightblue: #516d9b;
+$darkblue: #344A71;
 
 body {
     position: relative;
@@ -11,7 +13,7 @@ body {
   width: 100%;
   height: 95px;
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   .logo {
     width: 200px;
     padding-top: 16px;
@@ -140,12 +142,12 @@ li.dropdown {
   padding-top: 20px;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 235px;
+  z-index: 1;
   input::-webkit-input-placeholder,
   input[type=text] {
     @extend .hasDatepicker;
-    text-align: center;
-    padding: 5px;
+    text-align: left;
   }
   .check-availability-title {
     color: #fff;
@@ -251,7 +253,7 @@ li.dropdown {
   }
   .ui-datepicker-header {
     text-align: center;
-    color: #516d9b;
+    color: $lightblue;
     height: 35px;
     margin-top: 10px;
   }
@@ -302,10 +304,10 @@ li.dropdown {
       -o-transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
       transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
       &:hover {
-        background-color: #516d9b;
+        background-color: $lightblue;
         cursor: pointer;
         > .ui-state-default {
-          background-color: #516d9b;
+          background-color: $lightblue;
           color: #fff;
         }
       }
@@ -315,25 +317,145 @@ li.dropdown {
     }
   }
   .ui-datepicker-current-day {
-    background-color: #516d9b;
+    background-color: $lightblue;
     a {
       color: #fff;
     }
   }
   .ui-datepicker-calendar {
     .ui-datepicker-unselectable:hover {
-      background-color: #516d9b;
+      background-color: $lightblue;
       cursor: default;
     }
     thead th {
       text-transform: capitalize;
       color: #fff;
       font-weight: 400;
-      background-color: #516d9b;
+      background-color: $lightblue;
       padding: 12px 5px;
+    }
+  }
+}
+
+.picker-calendar {
+  position: absolute;
+  font-size: 18px;
+  top: 12px;
+  left: 135px;
+  color: #fff;
+}
+
+.section-check-availability-mobile {
+  @extend .section-check-availability;
+  height: 150px;
+  position: relative;
+  display: none;
+  bottom: 0;
+  background-color: $darkblue;
+  .check-availability-button {
+    margin-top: 20px;
+  }
+  .check-availability-pickers {
+    text-align: center;
+    .picker-mobile {
+    display: inline-block;
+    position: relative;
     }
   }
 }
 /*DATE PICKER END*/
 
 
+/*ABOUT MAIN PAGE*/
+.about-short {
+  position: relative;
+  h3 {
+    border-bottom: 1px solid rgba(52,74,113,.20);
+  }
+
+  .title-block {
+    height: 3px;
+    width: 15%;
+    background-color: $darkblue;
+    display: block;
+    position: absolute;
+    top: 39px;
+  }
+  .read-more {
+    @extend .styled-select;
+    color: $darkblue;
+    border: 2px solid $darkblue;
+    position: absolute;
+    left: 5px;
+    bottom: -50px;
+    &:hover {
+      background-color: $darkblue;
+      color: #fff;
+      transition-property: all .2s linear 0s;
+      -moz-transition: all .2s linear 0s;
+      -webkit-transition: all .2s linear 0s;
+      -o-transition: all .2s linear 0s;
+    }
+  }
+  .small-photo {
+  max-width: 100%;
+  }
+  .overview-list {
+    padding-left: 25px;
+    margin: 0;
+    li {
+      list-style-image: url("../img/list-icon.png");
+      font-size: 16px;
+    }
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERIES START*/
+@media (max-width: 1122px) {
+  .section-check-availability {
+    display: none;
+  }
+  .section-check-availability-mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-short {
+    .read-more {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      margin: 0;
+    }
+    .overview-list {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 668px) {
+  .picker-mobile {
+    margin-bottom: 20px;
+    width: 50%;
+    float: left;
+    input {
+      width: 90%;
+    }  
+  }
+  .picker-calendar {
+    left: 80%;
+  }
+}
