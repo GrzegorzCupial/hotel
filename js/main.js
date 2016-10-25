@@ -23,6 +23,31 @@ jQuery(document).ready(function($){
 });
 /*SCROLL TOP END*/
 
+/*NEWSLETTER: EMAIL VALIDATION START*/
+(function () {
+    $(function () {
+        var validate, validateEmail;
+        validateEmail = function (email) {
+            var emailReg;
+            emailReg = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\"\.+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return emailReg.test(email);
+        };
+        validate = function () {
+            var email;
+            email = $('#email').val();
+            if (validateEmail(email)) {
+                $( "#email" ).addClass( "correct-email" );
+            } else {
+                $( "#email" ).addClass( "wrong-email" );
+            }
+            return false;
+        };
+        $('form').bind('submit', validate);
+        return validateEmail();
+    });
+}.call(this));
+/*NEWSLETTER: EMAIL VALIDATION END*/
+
 /*LOGO SCROLL TOP START*/
 jQuery(document).ready(function($){
 		scroll_top_duration = 400,
