@@ -487,7 +487,7 @@ li.dropdown {
   padding-left: 5px;
   padding-right: 23px; }
 
-.styled-select, .about-short .read-more {
+.styled-select, .read-more, .accommodation .room-details-button, .accommodation .room-details-button-filled {
   display: inline-block;
   float: left;
   width: 100px;
@@ -664,19 +664,6 @@ li.dropdown {
     height: 320px; }
   .about-short h3 {
     border-bottom: 1px solid rgba(52, 74, 113, 0.2); }
-  .about-short .read-more {
-    color: #344A71;
-    border: 2px solid #344A71;
-    position: absolute;
-    left: 5px;
-    bottom: 20px;
-    transition-property: all .2s linear 0s;
-    -moz-transition: all .2s linear 0s;
-    -webkit-transition: all .2s linear 0s;
-    -o-transition: all .2s linear 0s; }
-    .about-short .read-more:hover {
-      background-color: #344A71;
-      color: #fff; }
   .about-short .small-photo {
     max-width: 100%; }
   .about-short .overview-list {
@@ -689,7 +676,21 @@ li.dropdown {
     width: 100%;
     height: 200px; }
 
-.title-block {
+.read-more, .accommodation .room-details-button, .accommodation .room-details-button-filled {
+  color: #344A71;
+  border: 2px solid #344A71;
+  position: absolute;
+  left: 5px;
+  bottom: 20px;
+  transition-property: all .2s linear 0s;
+  -moz-transition: all .2s linear 0s;
+  -webkit-transition: all .2s linear 0s;
+  -o-transition: all .2s linear 0s; }
+  .read-more:hover, .accommodation .room-details-button:hover, .accommodation .room-details-button-filled:hover {
+    background-color: #344A71;
+    color: #fff; }
+
+.title-block, .accommodation .accommodation-title-block {
   height: 3px;
   width: 15%;
   background-color: #344A71;
@@ -705,16 +706,19 @@ li.dropdown {
   .footer h3 {
     text-transform: uppercase;
     color: #fff; }
-  .footer .styled-select, .footer .about-short .read-more, .about-short .footer .read-more {
+  .footer .styled-select, .footer .read-more, .footer .accommodation .room-details-button, .accommodation .footer .room-details-button, .footer .accommodation .room-details-button-filled, .accommodation .footer .room-details-button-filled {
     width: 100%;
     margin: 0;
     padding-left: 5px; }
-    .footer .styled-select::-webkit-input-placeholder, .footer .about-short .read-more::-webkit-input-placeholder, .about-short .footer .read-more::-webkit-input-placeholder,
+    .footer .styled-select::-webkit-input-placeholder, .footer .read-more::-webkit-input-placeholder, .footer .accommodation .room-details-button::-webkit-input-placeholder, .accommodation .footer .room-details-button::-webkit-input-placeholder, .footer .accommodation .room-details-button-filled::-webkit-input-placeholder, .accommodation .footer .room-details-button-filled::-webkit-input-placeholder,
     .footer .styled-select input[type=text],
-    .footer .about-short .read-more input[type=text], .about-short
-    .footer .read-more input[type=text] {
+    .footer .read-more input[type=text],
+    .footer .accommodation .room-details-button input[type=text], .accommodation
+    .footer .room-details-button input[type=text],
+    .footer .accommodation .room-details-button-filled input[type=text], .accommodation
+    .footer .room-details-button-filled input[type=text] {
       text-align: left; }
-  .footer .styled-select[type=text], .footer .about-short [type=text].read-more, .about-short .footer [type=text].read-more {
+  .footer .styled-select[type=text], .footer [type=text].read-more, .footer .accommodation [type=text].room-details-button, .accommodation .footer [type=text].room-details-button, .footer .accommodation [type=text].room-details-button-filled, .accommodation .footer [type=text].room-details-button-filled {
     text-align: left;
     padding-left: 5px; }
   .footer .check-button {
@@ -790,7 +794,7 @@ li.dropdown {
   margin: 0;
   border-bottom: 1px solid rgba(52, 74, 113, 0.2); }
 
-.about-full .title-block {
+.about-full .title-block, .about-full .accommodation .accommodation-title-block, .accommodation .about-full .accommodation-title-block {
   top: 29px; }
 
 .about-full .about-img {
@@ -946,6 +950,44 @@ li.dropdown {
     background-color: #344A71;
     color: #fff; }
 
+/*ACCOMMODATION START*/
+.accommodation article {
+  position: relative; }
+  .accommodation article h3 {
+    border-bottom: 1px solid rgba(52, 74, 113, 0.2); }
+  .accommodation article .accommodation-list {
+    font-size: 16px;
+    list-style: none;
+    padding-left: 15px;
+    line-height: 30px; }
+    .accommodation article .accommodation-list .accommodation-list-item {
+      list-style-image: url("../img/list2.png");
+      list-style-position: outside; }
+      .accommodation article .accommodation-list .accommodation-list-item .list-item-strong {
+        font-weight: 600;
+        color: rgba(52, 74, 113, 0.6); }
+
+.accommodation .accommodation-photo img {
+  width: 100%; }
+
+.accommodation .accommodation-title-block {
+  top: 22px; }
+
+.accommodation .room-details-button, .accommodation .room-details-button-filled {
+  color: #344A71;
+  border: 2px solid #344A71;
+  position: relative;
+  margin: 20px 10px 0 0;
+  float: left;
+  width: 128px; }
+
+.accommodation .room-details-button-filled {
+  color: #fff;
+  background-color: #344A71; }
+  .accommodation .room-details-button-filled:hover {
+    background-color: #fff;
+    color: #344A71; }
+
 /*MEDIA QUERIES START*/
 @media (max-width: 1196px) {
   .section-check-availability, .section-check-availability-mobile {
@@ -960,7 +1002,7 @@ li.dropdown {
     display: block; }
   .about-short .about-part {
     height: auto; }
-  .about-short .read-more {
+  .about-short .read-more, .about-short .accommodation .room-details-button, .accommodation .about-short .room-details-button, .about-short .accommodation .room-details-button-filled, .accommodation .about-short .room-details-button-filled {
     position: relative;
     bottom: 0;
     left: 0;
@@ -973,7 +1015,7 @@ li.dropdown {
 @media (max-width: 767px) {
   .about-short .about-part {
     margin-bottom: 70px; }
-  .title-block {
+  .title-block, .accommodation .accommodation-title-block {
     top: 22px; }
   .dl-menuwrapper {
     right: 0;
@@ -1027,7 +1069,9 @@ li.dropdown {
     color: #fff; }
   .about-full .about-img {
     width: 100%;
-    padding: 0 0 14px 0; } }
+    padding: 0 0 14px 0; }
+  .accommodation .room-details-button, .accommodation .room-details-button-filled {
+    width: 100%; } }
 
 @media only screen and (min-width: 320px) and (max-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .sub-page-hero .hero-title {

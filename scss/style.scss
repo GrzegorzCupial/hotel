@@ -825,22 +825,7 @@ li.dropdown {
     border-bottom: 1px solid rgba(52,74,113,.20);
   }
 
-  .read-more {
-    @extend .styled-select;
-    color: $darkblue;
-    border: 2px solid $darkblue;
-    position: absolute;
-    left: 5px;
-    bottom: 20px;
-    transition-property: all .2s linear 0s;
-    -moz-transition: all .2s linear 0s;
-    -webkit-transition: all .2s linear 0s;
-    -o-transition: all .2s linear 0s;
-    &:hover {
-      background-color: $darkblue;
-      color: #fff;
-    }
-  }
+  
   .small-photo {
   max-width: 100%;
   }
@@ -857,6 +842,22 @@ li.dropdown {
     height: 200px;
   }
 }
+.read-more {
+    @extend .styled-select;
+    color: $darkblue;
+    border: 2px solid $darkblue;
+    position: absolute;
+    left: 5px;
+    bottom: 20px;
+    transition-property: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -webkit-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    &:hover {
+      background-color: $darkblue;
+      color: #fff;
+    }
+  }
 .title-block {
   height: 3px;
   width: 15%;
@@ -962,6 +963,8 @@ li.dropdown {
       object-fit: cover
     }
 }
+
+
 
 .pointer {
   cursor: pointer;
@@ -1132,12 +1135,10 @@ li.dropdown {
   .name {
     float: left;
     width: 47%;
-    
   }
   .email {
     float: right;
     width: 47%;
-    
   }
   textarea {
     width: 100%;
@@ -1175,7 +1176,57 @@ li.dropdown {
   }
 }
 
-
+/*ACCOMMODATION START*/
+.accommodation {
+  article {
+    position: relative;
+    h3 {
+      border-bottom: 1px solid rgba(52, 74, 113, 0.2);
+    }
+    .accommodation-list {
+      font-size: 16px;
+      list-style: none;
+      padding-left: 15px;
+      line-height: 30px;
+      .accommodation-list-item {
+        list-style-image: url("../img/list2.png");
+        list-style-position: outside;
+        .list-item-strong {
+          font-weight: 600;
+          color: rgba(52, 74, 113, 0.6);
+        }
+      }
+    }
+  }
+  .accommodation-photo {
+    img {
+      width: 100%;
+    }
+  }
+  .accommodation-title-block {
+    @extend .title-block;
+    top: 22px;
+    
+  }
+  .room-details-button {
+    @extend .read-more;
+    color: $darkblue;
+    border: 2px solid $darkblue;
+    position: relative;
+    margin: 20px 10px 0 0;
+    float: left;
+    width: 128px;
+  }
+  .room-details-button-filled {
+    @extend .room-details-button;
+    color: #fff;
+    background-color: $darkblue;
+    &:hover {
+      background-color: #fff;
+      color: $darkblue;
+    }
+  }
+}
 
 
 
@@ -1327,6 +1378,11 @@ li.dropdown {
     .about-img {
     width: 100%;
     padding: 0 0 14px 0;
+    }
+  }
+  .accommodation {
+    .room-details-button {
+      width: 100%;
     }
   }
 } 
